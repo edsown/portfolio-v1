@@ -1,9 +1,35 @@
 * {
-  display: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
+.navbar {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  background-color: rgb(0, 59, 114);
+  padding: 30px;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin-left: 30px;
+  color: whitesmoke;
+}
+
+.logo {
+  margin-right: auto;
+  color: whitesmoke;
+}
+
+.logo,
+a,
+li {
+  font-family: "Montserrat", sans-serif;
+}
+
+a:visited {
+  color: whitesmoke;
+  opacity: 0.9;
+  text-decoration: none;
 }
