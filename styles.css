@@ -48,3 +48,10 @@ a:hover {
   color: gray;
   margin-top: 100px;
 }
+a {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding: 2em;
+  margin: -2em;
+}

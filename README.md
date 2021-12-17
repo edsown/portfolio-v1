@@ -1,2 +1,1 @@
-# first-project
-My first ever project, using vanilla JS, HTML and CSS
+projetinho bobo so pra saber se eu aprendi css mesmo ou tava de sacanagem
