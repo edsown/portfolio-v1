@@ -2,6 +2,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
+  color: whitesmoke;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 .navbar {
@@ -24,13 +29,11 @@
 
 .logo {
   margin-right: auto;
-  color: whitesmoke;
 }
 
 .logo,
 a,
 li {
-  font-family: "Montserrat", sans-serif;
   text-decoration: none;
   cursor: pointer;
 }
@@ -63,4 +66,17 @@ a {
 .blue {
   height: 100vh;
   background-color: #d4f1f4;
+}
+
+.pagina {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+.container {
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
+  height: 100vh;
 }
