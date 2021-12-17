@@ -13,7 +13,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #05445e;
+  background-color: #2d2d34;
   padding: 30px;
   position: fixed;
   width: 100vw;
@@ -57,15 +57,15 @@ a {
 
 .red {
   height: 100vh;
-  background-color: #189ab4;
+  background-color: #6d7275;
 }
 .green {
   height: 100vh;
-  background-color: #75e6da;
+  background-color: #c7d6d5;
 }
 .blue {
   height: 100vh;
-  background-color: #d4f1f4;
+  background-color: #ecebf3;
 }
 
 .pagina {
@@ -76,7 +76,7 @@ a {
 }
 
 .container {
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
 }
