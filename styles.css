@@ -8,15 +8,37 @@ html {
   scroll-behavior: smooth;
 }
 
+/* scrollbar */
+
+::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-around;
   background-color: #2d2d34;
+  opacity: 0.95;
   padding: 30px;
   position: fixed;
-  width: 100vw;
+  width: 99.5vw;
   top: 0;
+  padding-right: 50px;
+  padding-left: 50px;
+  z-index: 100;
 }
 
 .navbar ul li {
@@ -24,6 +46,11 @@ html {
   margin-left: 30px;
   color: whitesmoke;
   margin-right: 15px;
+}
+
+.navbar ul li a {
+  padding: 2em;
+  margin: -2em;
 }
 
 .logo {
@@ -50,8 +77,6 @@ a {
   display: inline-block;
   position: relative;
   z-index: 1;
-  padding: 2em;
-  margin: -2em;
 }
 
 .red {
@@ -62,7 +87,7 @@ a {
 .green {
   height: 100vh;
   background-color: #c7d6d5;
-  color: whitesmoke;
+  color: grey;
 }
 .blue {
   height: 100vh;
@@ -75,10 +100,175 @@ a {
   align-items: center;
   justify-content: center;
   scroll-snap-align: start;
+  overflow: auto;
 }
 
 .container {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
+}
+
+/* Cards Fireship */
+
+.card-list {
+  display: flex;
+  padding: 3rem;
+}
+
+.card {
+  height: 350px;
+  width: 400px;
+  min-width: 250px;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: url("https://images.unsplash.com/photo-1560807707-8cc77767d783?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80")
+    50% / cover;
+
+  box-shadow: -1rem 0 3rem #000;
+
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s;
+  margin: 0;
+  scroll-snap-align: start;
+  clear: both;
+  position: relative;
+}
+
+.card:focus-within ~ .card,
+.card:hover ~ .card {
+  transform: translateX(130px);
+}
+
+.card:hover {
+  transform: translateY(1rem);
+  background: black;
+}
+
+.card:not(:first-child) {
+  margin-left: -130px;
+}
+
+.card-header {
+  margin-bottom: auto;
+}
+
+.card p {
+  font-size: 18px;
+  margin: 0 0 1rem;
+  color: white;
+  mix-blend-mode: difference;
+  display: none;
+}
+
+.card:hover p {
+  display: flex;
+}
+
+.card-header h2 {
+  font-size: 20px;
+  margin: 0.25rem 0 auto;
+  text-decoration: none;
+  color: white;
+  mix-blend-mode: difference;
+  border: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.card-header h2 a:hover {
+  background: linear-gradient(90deg, #0004ff, #80e52e);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.card-header h2:hover {
+  background: linear-gradient(90deg, #0004ff, #80e52e);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.card-author {
+  margin: 3rem 0 0;
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  align-items: center;
+  position: relative;
+}
+
+.author-avatar {
+  grid-area: auto;
+  align-self: start;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.author-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  display: block;
+  overflow: hidden;
+  margin: 16px 10px;
+}
+
+.author-name {
+  grid-area: auto;
+  box-sizing: border-box;
+}
+
+.author-name-prefix {
+  font-style: normal;
+  font-weight: 700;
+  color: #7a7a8c;
+}
+
+.half-circle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 48px;
+  fill: none;
+  stroke: #ff8a00;
+  stroke-width: 8;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+.tags {
+  margin: 1rem 0 2rem;
+  padding: 0.5rem 0 1rem;
+  line-height: 2;
+  margin-bottom: 0;
+}
+
+.tags a {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.5rem;
+  color: white;
+  mix-blend-mode: difference;
+  text-transform: uppercase;
+  font-size: 0.66rem;
+  border: 3px solid white;
+  border-radius: 2rem;
+  padding: 0.2rem 0.85rem 0.25rem;
+  margin: 0 10px 0 0px;
+  position: relative;
+}
+
+.tags a:hover {
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-box-decoration-break: clone;
+  background-clip: text;
+  border-color: white;
 }
