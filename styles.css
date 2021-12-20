@@ -55,6 +55,7 @@ html {
 
 .logo {
   margin-right: auto;
+  font-weight: 700;
 }
 
 .logo,
@@ -83,6 +84,7 @@ a {
   height: 100vh;
   background-color: #6d7275;
   color: whitesmoke;
+  padding: 10px;
 }
 #contato {
   height: 100vh;
@@ -91,6 +93,7 @@ a {
   text-align: center;
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 #sobre {
   height: 100vh;
@@ -120,23 +123,64 @@ a {
   justify-content: center;
   align-items: center;
   color: #ecebf3;
-  background: url("/foto-edson.jpg") no-repeat 50% / cover;
-  background-position: -375px;
-  background-color: grey;
+  background: url("/foto-edson.jpg") no-repeat 100% / cover;
+  background-size: contain;
+  background-position: -75px;
+  background-color: #444b6e;
   box-shadow: -1rem 0 2rem #000;
   border-radius: 16px;
 }
 
 .about-text {
-  margin-left: 375px;
+  margin-left: 315px;
   font-size: 18px;
   text-align: justify;
   text-justify: inter-character;
+  padding: 25px;
+  line-height: 1.4;
 }
 
 .about-text h2 {
   font-size: 30px;
 }
+.github-icon {
+  height: 50px;
+  position: absolute;
+  top: 190px;
+  filter: brightness(0) invert(1);
+}
+@media (max-width: 600px) {
+  .about-card {
+    zoom: 0.5;
+  }
+  .about-text {
+    font-size: 24px;
+    text-align: justify;
+    word-spacing: 1px;
+  }
+
+  .github-icon {
+    height: 100px;
+    top: 0px;
+  }
+
+  .navbar ul li {
+    display: inline-block;
+    margin-left: 0px;
+    color: whitesmoke;
+    margin-right: 15px;
+    padding: 0px;
+  }
+
+  .navbar {
+    padding: 20px;
+  }
+  .navbar ul li a {
+    padding: 1em;
+    margin: -1em;
+  }
+}
+
 /* Cards Fireship */
 
 .card {
@@ -145,11 +189,9 @@ a {
   min-width: 250px;
   padding: 1.5rem;
   border-radius: 16px;
-  background: url("https://images.unsplash.com/photo-1560807707-8cc77767d783?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80")
-    50% / cover;
-
+  background: url(/portfolio-snapshot.jpg) no-repeat 50% / cover;
+  /* background-size: 105%; */
   box-shadow: -1rem 0 3rem #000;
-
   display: flex;
   flex-direction: column;
   transition: 0.2s;
@@ -245,6 +287,7 @@ a {
   padding: 0.5rem 0 1rem;
   line-height: 2;
   margin-bottom: 0;
+  filter: drop-shadow(3px 3px 4px black);
 }
 
 .tags a {
@@ -254,7 +297,7 @@ a {
   color: white;
   mix-blend-mode: difference;
   text-transform: uppercase;
-  font-size: 0.66rem;
+  font-size: 0.8rem;
   border: 3px solid white;
   border-radius: 2rem;
   padding: 0.2rem 0.85rem 0.25rem;
