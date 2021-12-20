@@ -1,61 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Edson - Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
-    <script src="jquery-3.5.1.min.js"></script>
-  </head>
-  <body>
-    <header>
-      
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Edson - Portfolio</title>
+   <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+   <script src="jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+   <header>
       <nav class="navbar">
-        <div class="logo"><a href="#sobre">EDSON SOUSA</a></div>
-        <ul>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-        <div>
+         <div class="logo"><a href="#sobre">EDSON SOUSA</a></div>
+         <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contato">Contato</a></li>
+         </ul>
+         <div>
       </nav>
-      
-    </header>
-    <div class="container">  
-      <div id="sobre" class="pagina blue">Edson Sousa Jr. <br> Brasiliense, 25 Anos. <br>
-        Engenheiro Eletricista formado pela Universidade de Brasília, ex-professor de Língua Inglesa. <br>
-        Começou uma grande transição de carreira em 2021.</div>
-      <div id="portfolio" class="pagina red">
-        
-          
-          <article class="card">
-        <header class="card-header">
-          <p>15 Dez 2021</p>
-          <h2><a href="#sobre">Portfolio Web</a></h2>
-          <p class="description"> (Você já está aqui)
-        </header>
-        
-        <div class="tags">
-          <a href="#">html</a>
-          <a href="#">css</a>
-          <a href="#">JS</a>
-          <a href="#">web-dev</a>
-          
-        </div>
-      </article>
-      
-      </div>      
-      <div id="contato" class="pagina green">
-        Seu e-mail:&nbsp;&nbsp;
-        <input type="email" placeholder="email@gmail.com"> <button>Enviar</button>
+   </header>
+   <div class="container">
+      <div id="sobre" class="pagina">
+         <div class="about-card">
+            <div class="about-text">
+               <h2>Edson Sousa Jr.</h2>
+               <br>
+               <p>&emsp;Engenheiro Eletricista formado pela Universidade de Brasília e ex-professor de Língua
+                  Inglesa
+                  na rede
+                  CNA Idiomas. Atualmente, aos 25 anos, buscando entrar na carreira de desenvolvimento.</p>
+            </div>
+         </div>
       </div>
-    </div>
-  
+      <div id="portfolio" class="pagina">
+         <article class="card">
+            <header class="card-header">
+               <p>15 Dez 2021</p>
+               <h2><a href="#sobre">Portfolio Web</a></h2>
+               <p class="description"> (Você já está aqui)
+            </header>
+            <div class="tags">
+               <a href="#">html</a>
+               <a href="#">css</a>
+               <a href="#">JS</a>
+               <a href="#">web-dev</a>
+            </div>
+         </article>
+      </div>
+      <div id="contato" class="pagina">
+         Eu ainda não sei fazer o formulário que você preencher chegar até mim (prometo que em breve eu chego lá). <br>
+         Enquanto isso, clica no botão pra enviar um e-mail pra mim: <br>
+         <form action="mailto:edsonoliveira.contato@gmail.com">
+            <input class="email-button" type="submit" value="Abrir e-mail" />
+         </form>
+      </div>
+      <script src="script.js"></script>
+</body>
 
-    <script src="script.js"></script>
-    
-
-
-  </body>
 </html>

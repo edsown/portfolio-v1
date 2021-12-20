@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Myriad Apple", sans-serif;
 }
 html {
   scroll-behavior: smooth;
@@ -79,17 +79,20 @@ a {
   z-index: 1;
 }
 
-.red {
+#portfolio {
   height: 100vh;
   background-color: #6d7275;
   color: whitesmoke;
 }
-.green {
+#contato {
   height: 100vh;
   background-color: #c7d6d5;
   color: grey;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
-.blue {
+#sobre {
   height: 100vh;
   background-color: #ecebf3;
   color: grey;
@@ -108,13 +111,33 @@ a {
   overflow-y: scroll;
   height: 100vh;
 }
-
-/* Cards Fireship */
-
-.card-list {
-  display: flex;
-  padding: 3rem;
+.about-card {
+  margin-top: 100px;
+  height: 550px;
+  width: 750px;
+  min-width: 750px;
+  padding: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  color: #ecebf3;
+  background: url("/foto-edson.jpg") no-repeat 50% / cover;
+  background-position: -375px;
+  background-color: grey;
+  box-shadow: -1rem 0 2rem #000;
+  border-radius: 16px;
 }
+
+.about-text {
+  margin-left: 375px;
+  font-size: 18px;
+  text-align: justify;
+  text-justify: inter-character;
+}
+
+.about-text h2 {
+  font-size: 30px;
+}
+/* Cards Fireship */
 
 .card {
   height: 350px;
@@ -146,10 +169,6 @@ a {
   background: black;
 }
 
-.card:not(:first-child) {
-  margin-left: -130px;
-}
-
 .card-header {
   margin-bottom: auto;
 }
@@ -178,13 +197,6 @@ a {
 }
 
 .card-header h2 a:hover {
-  background: linear-gradient(90deg, #0004ff, #80e52e);
-  text-shadow: none;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-.card-header h2:hover {
   background: linear-gradient(90deg, #0004ff, #80e52e);
   text-shadow: none;
   -webkit-text-fill-color: transparent;
@@ -228,19 +240,6 @@ a {
   color: #7a7a8c;
 }
 
-.half-circle {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 60px;
-  height: 48px;
-  fill: none;
-  stroke: #ff8a00;
-  stroke-width: 8;
-  stroke-linecap: round;
-  pointer-events: none;
-}
-
 .tags {
   margin: 1rem 0 2rem;
   padding: 0.5rem 0 1rem;
@@ -268,7 +267,13 @@ a {
   text-shadow: none;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  -webkit-box-decoration-break: clone;
   background-clip: text;
   border-color: white;
+}
+
+.email-button {
+  padding: 5px;
+  color: whitesmoke;
+  background-color: cadetblue;
+  margin-top: 20px;
 }
