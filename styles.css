@@ -88,8 +88,8 @@ a {
 }
 #contato {
   height: 100vh;
-  background-color: #c7d6d5;
-  color: grey;
+  background-color: #7d848d;
+  color: white;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -97,7 +97,7 @@ a {
 }
 #sobre {
   height: 100vh;
-  background-color: #ecebf3;
+  background-color: #555a5e;
   color: grey;
 }
 
@@ -189,7 +189,7 @@ a {
   min-width: 250px;
   padding: 1.5rem;
   border-radius: 16px;
-  background: url(/portfolio-snapshot.jpg) no-repeat 50% / cover;
+  background: url(/macbook.jpg) no-repeat 50% / cover;
   /* background-size: 105%; */
   box-shadow: -1rem 0 3rem #000;
   display: flex;
@@ -315,8 +315,11 @@ a {
 }
 
 .email-button {
-  padding: 5px;
+  padding: 10px;
   color: whitesmoke;
-  background-color: cadetblue;
+  background-color: #444b6e;
   margin-top: 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
 }
